@@ -1,0 +1,46 @@
+[middleware]
+
+	;
+	; Whether or not the middleware is disabled
+	;
+
+	disabled = false
+
+	;
+	; The priority for the middleware
+	;
+
+	priority = 25
+
+	;
+	; The middleware class
+	;
+
+	class = Hiraeth\Middleware\BrowserRedirect
+
+;
+; You can add a [browser] section to any config file in order to define rules.
+;
+
+[browser]
+
+	;
+	; Rules is an array of objects requiring the following:
+	;
+	; target   - A RegEx which if the request path matches will consider the rule operable
+	; browser  - A browser name which if the user agent string matches will consider the rule operable
+	; version  - A string or array of strings which if the user agent string matches will consider this rule operable
+	; redirect - The Location header to redirect to
+	;
+	; All User-Agent matching for browser/version is performed by sinergi/browser-detector, you can
+	; use < and > for basic less than and greater than logic on versions.
+	;
+
+	rules = [
+;		{
+;			"target": "/.*",
+;			"browser": "IE",
+;			"version": "<10",
+;			"redirect": "https://getfirefox.com"
+;		}
+	]
