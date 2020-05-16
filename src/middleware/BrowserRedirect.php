@@ -102,7 +102,7 @@ class BrowserRedirect implements Middleware
 			// Check Path
 			//
 
-			if (!preg_match('#' . $rule['target'] . '#', $target)) {
+			if (!preg_match('#' . $rule['target'] . '#', $target) || $target == $rule['redirect']) {
 				return FALSE;
 			}
 
