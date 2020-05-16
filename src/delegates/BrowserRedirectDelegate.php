@@ -9,7 +9,7 @@ use Psr\Http\Message\ResponseFactoryInterface;
 /**
  * {@inheritDoc}
  */
-class HiddenMethodsDelegate extends AbstractDelegate
+class BrowserRedirectDelegate extends AbstractDelegate
 {
 	/**
 	 * {@inheritDoc}
