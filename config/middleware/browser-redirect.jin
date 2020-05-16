@@ -39,7 +39,7 @@
 	rules = [
 ;		{
 ;			"target": "/.*",
-;			"browser": "IE",
+;			"browser": "Internet Explorer",
 ;			"version": "<10",
 ;			"redirect": "https://getfirefox.com"
 ;		}
