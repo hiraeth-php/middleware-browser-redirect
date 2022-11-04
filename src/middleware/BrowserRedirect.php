@@ -18,6 +18,24 @@ use Psr\Http\Message\ResponseFactoryInterface as ResponseFactory;
 class BrowserRedirect implements Middleware
 {
 	/**
+	 * @var Browser
+	 */
+	protected $browser;
+
+
+	/**
+	 * @var ResponseFactory
+	 */
+	protected $factory;
+
+
+	/**
+	 * @var array<int, mixed>
+	 */
+	protected $rules;
+
+
+	/**
 	 * Create a new instacne of the middleware
 	 */
 	public function __construct(Browser $browser, ResponseFactory $factory)
@@ -28,7 +46,8 @@ class BrowserRedirect implements Middleware
 
 
 	/**
-	 *
+	 * @param array<string, mixed> $rule
+	 * @return self
 	 */
 	public function addRule(array $rule)
 	{
@@ -48,7 +67,8 @@ class BrowserRedirect implements Middleware
 
 
 	/**
-	 *
+	 * @param array<string, mixed> $rules
+	 * @return self
 	 */
 	public function addRules(array ...$rules)
 	{
